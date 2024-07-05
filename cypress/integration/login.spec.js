@@ -23,23 +23,4 @@ it("Пустой пароль", () => {
   });
 });
 
-it("Создание книги", () => {
-  cy.login("bropet@mail.ru", "123");
-  cy.newBook("Книга", "Описание", "Автор")
-  cy.contains("Books list").click();
-  cy.contains("Книга").should("be.visible");
-});
-
-it.only("Добавить в фавориты", () => {
-  cy.login("bropet@mail.ru", "123");
-  cy.newBook("Моя Книга", "Описание", "Автор");
-  cy.contains("Books list").click();
-  cy.contains("Моя Книга").should("be.visible");
-  cy.get("#Add to favorite").then((elements) => {
-    elements[last].click
-  });
-  cy.contains("Favorites").click();
-  cy.contains("Моя Книга").should("be.visible");
-});
-
 

@@ -4,11 +4,19 @@
   "description": "first tests with Cypress",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "testMob1": "npx cypress open --config-file cypress2.config.js  --browser chrome",
+    "testMob2": "npx cypress open --config-file cypress2.config.js  --browser firefox",
+    "testMob3": "npx cypress run --headed --config-file cypress2.config.js",
+    "testMob4": "npx cypress run --headless --config-file cypress2.config.js",
+    "testNote1": "npx cypress open --config-file cypress.config.js  --browser chrome",
+    "testNote2": "npx cypress open --config-file cypress.config.js  --browser firefox",
+    "testNote3": "npx cypress run --headed --config-file cypress.config.js",
+    "testNote4": "npx cypress run --headless --config-file cypress.config.js"
   },
   "author": "OM",
   "license": "ISC",
   "dependencies": {
-    "cypress": "^8.3.0"
-  }
+    "cypress": "^8.7.0"
+  },
+  "keywords": []
 }
